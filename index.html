@@ -8,16 +8,45 @@
     <link rel="stylesheet" href="index.css" type="text/css" />
 </head>
 <body>
-<img id="myImg" src="img/test.jpg" alt="Snow" style="width:100%;max-width:300px">
-
-
+    
+       <ul class="thumb">
+        <li><a href="img/img2.jpg" target="imgBox"><img src="img/img2.jpg"></a></li>
+        <li><a href="img/img1.jpg" target="imgBox"><img src="img/img1.jpg" ></a></li>
+        <li><a href="img/img3.jpg" target="imgBox"><img src="img/img3.jpg" ></a></li>
+        <li><a href="img/img4.jpg" target="imgBox"><img src="img/img4.jpg" ></a></li>
+        <li><a href="img/img5.jpg" target="imgBox"><img src="img/img5.jpg" ></a></li>
+        <li><a href="img/img1.jpg" target="imgBox"><img src="img/img1.jpg" ></a></li>
+        <li><a href="img/img2.jpg" target="imgBox"><img src="img/img2.jpg" ></a></li>
+        <li><a href="img/img3.jpg" target="imgBox"><img src="img/img3.jpg" ></a></li>
+        <li><a href="img/img4.jpg" target="imgBox"><img src="img/img4.jpg" ></a></li>
+        <li><a href="img/img5.jpg" target="imgBox"><img src="img/img5.jpg" ></a></li>
+        <li><a href="img/img1.jpg" target="imgBox"><img src="img/img1.jpg" ></a></li>
+        <li><a href="img/img2.jpg" target="imgBox"><img src="img/img2.jpg" ></a></li>
+        <li><a href="img/img3.jpg" target="imgBox"><img src="img/img3.jpg" ></a></li>
+        <li><a href="img/img4.jpg" target="imgBox"><img src="img/img4.jpg" ></a></li>
+        <li><a href="img/img5.jpg" target="imgBox"><img src="img/img5.jpg" ></a></li>
+    </ul>
+    
+    
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div class="modal">
   <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
+  <img class="modal-content" src="img/test.jpg" alt="img">
  
 </div>
-
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.thumb a').click(function(e) {
+                e.preventDefault();
+                $('.modal img').attr("src", $(this).attr("href"));
+                $('.modal').css("display", "block");
+            })
+            $('.close').click(function(){
+                 $('.modal').css("display", "none");
+            }) 
+        })
+    </script>
     <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
